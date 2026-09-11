@@ -139,12 +139,17 @@ function renderBiscuits() {
 
         const scale = data.scale || 1;
 
+        const imgArea = document.createElement("div");
+        imgArea.className = "biscuit-image-area";
+
         const img = document.createElement("img");
         img.className = "biscuit-image";
         img.src = data.image;
         img.alt = name;
         img.style.width = (110 * scale) + "px";
         img.style.height = (110 * scale) + "px";
+
+        imgArea.appendChild(img);
 
         const title = document.createElement("h3");
         title.textContent = name;
@@ -153,7 +158,7 @@ function renderBiscuits() {
         button.className = "test-btn";
         button.textContent = "Test Me";
 
-        card.appendChild(img);
+        card.appendChild(imgArea);
         card.appendChild(title);
         card.appendChild(button);
 

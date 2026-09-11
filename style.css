@@ -60,6 +60,9 @@ header p {
     transition: 0.25s;
     cursor: pointer;
     border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .biscuit-card:hover {
@@ -67,15 +70,25 @@ header p {
     border-color: #d69b62;
 }
 
-.biscuit-image {
-    width: 110px;
-    height: 110px;
-    object-fit: contain;
+.biscuit-image-area {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 12px;
+}
+
+.biscuit-image {
+    object-fit: contain;
 }
 
 .biscuit-card h3 {
     margin-bottom: 12px;
+}
+
+.biscuit-card .test-btn {
+    margin-top: auto;
 }
 
 .test-btn,
